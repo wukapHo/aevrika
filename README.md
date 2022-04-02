@@ -1,4 +1,7 @@
-# Todo list as test task
+# Test task
+TodoList, [Demo](https://todolist-aevrika.netlify.app/).
+
+![App screenshot](https://github.com/wukapHo/aevrika/raw/main/screenshot.png)
 
 ## Build Setup
 
