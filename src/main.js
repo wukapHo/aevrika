@@ -165,12 +165,16 @@ window.app = new Vue({
           :key="todo.id"
           class="todo-item active"
         >
-          {{ todo.text }}
+          <div class="checkbox-wrapper">
+            <input
+              type="checkbox"
+              :checked="!todo.active"
+              @change="todo.active = !todo.active"
+            />
+            {{ todo.text }}
+          </div>
 
           <div>
-            <button @click="todo.active = !todo.active">
-              Завершить
-            </button>
             <button @click="remove(todo)">
               Удалить
             </button>
@@ -188,21 +192,17 @@ window.app = new Vue({
           class="todo-item"
           :class="todo.active ? 'active' : 'completed'"
         >
-          {{ todo.text }}
+          <div class="checkbox-wrapper">
+            <input
+              type="checkbox"
+              :checked="!todo.active"
+              @change="todo.active = !todo.active"
+            />
+            {{ todo.text }}
+          </div>
 
           <div>
-            <button
-              v-if="todo.active"
-              @click="todo.active = !todo.active"
-            >
-              Завершить
-            </button>
-            <button
-              v-else
-              @click="todo.active = !todo.active"
-            >
-              Восстановить
-            </button>
+
             <button @click="remove(todo)">
               Удалить
             </button>
@@ -219,12 +219,16 @@ window.app = new Vue({
           :key="todo.id"
           class="todo-item completed"
         >
-          {{ todo.text }}
+          <div class="checkbox-wrapper">
+            <input
+              type="checkbox"
+              :checked="!todo.active"
+              @change="todo.active = !todo.active"
+            />
+            {{ todo.text }}
+          </div>
 
           <div>
-            <button @click="todo.active = !todo.active">
-              Восстановить
-            </button>
             <button @click="remove(todo)">
               Удалить
             </button>
