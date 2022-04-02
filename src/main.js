@@ -60,7 +60,7 @@ window.app = new Vue({
   // Вынес обращение к инпуту в хук mounted
   mounted() {
     // Заменил неработающий метод .getElementById() на вьюшные ref'ы
-    // this.$refs.todoInput.focus();
+    this.$refs.todoInput.focus();
   },
 
   methods: {
