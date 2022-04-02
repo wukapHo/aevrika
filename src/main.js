@@ -164,12 +164,12 @@ window.app = new Vue({
           v-for="todo in activeTodos"
           :key="todo.id"
           class="todo-item active"
+          @click="todo.active = !todo.active"
         >
           <div class="checkbox-wrapper">
             <input
               type="checkbox"
               :checked="!todo.active"
-              @change="todo.active = !todo.active"
             />
             {{ todo.text }}
           </div>
@@ -191,12 +191,12 @@ window.app = new Vue({
           :key="todo.id"
           class="todo-item"
           :class="todo.active ? 'active' : 'completed'"
+          @click="todo.active = !todo.active"
         >
           <div class="checkbox-wrapper">
             <input
               type="checkbox"
               :checked="!todo.active"
-              @change="todo.active = !todo.active"
             />
             {{ todo.text }}
           </div>
@@ -218,12 +218,12 @@ window.app = new Vue({
           v-for="todo in completedTodos"
           :key="todo.id"
           class="todo-item completed"
+          @click="todo.active = !todo.active"
         >
           <div class="checkbox-wrapper">
             <input
               type="checkbox"
               :checked="!todo.active"
-              @change="todo.active = !todo.active"
             />
             {{ todo.text }}
           </div>
