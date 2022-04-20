@@ -1,4 +1,4 @@
-# Test task
+# Test project. Refactoring
 TodoList, [Demo](https://todolist-aevrika.netlify.app/).
 
 ![App screenshot](https://github.com/wukapHo/aevrika/raw/main/screenshot.png)
